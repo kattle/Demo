@@ -4,11 +4,11 @@
 #include <QStringList>
 #include <QString>
 #include <QDir>
-
+#include <QTime>
+#include <QCoreApplication>
 
 QStringList getAllFilesInFolders(QString pDir);
 QString getFileName(QString filePath);
 int getKey(QString pString,QString pPrefix );
-
 
 #endif // GLOBALFUN_H

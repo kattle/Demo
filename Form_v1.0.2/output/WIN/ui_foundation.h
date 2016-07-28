@@ -1,8 +1,8 @@
 /********************************************************************************
 ** Form generated from reading UI file 'foundation.ui'
 **
-** Created: Wed Jul 27 07:28:01 2016
-**      by: Qt User Interface Compiler version 4.8.2
+** Created: Thu Jul 28 07:23:14 2016
+**      by: Qt User Interface Compiler version 4.8.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -54,6 +54,11 @@ public:
     QSpacerItem *horizontalSpacer_4;
     QSpacerItem *verticalSpacer;
     QWidget *page_main;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_9;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_15;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -62,7 +67,7 @@ public:
     {
         if (Foundation->objectName().isEmpty())
             Foundation->setObjectName(QString::fromUtf8("Foundation"));
-        Foundation->resize(516, 408);
+        Foundation->resize(664, 537);
         Foundation->setStyleSheet(QString::fromUtf8("font: 11pt \"\345\276\256\350\275\257\351\233\205\351\273\221\";"));
         centralWidget = new QWidget(Foundation);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
@@ -150,6 +155,27 @@ public:
         stackedWidget->addWidget(page_login);
         page_main = new QWidget();
         page_main->setObjectName(QString::fromUtf8("page_main"));
+        widget = new QWidget(page_main);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(12, 0, 588, 22));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_9 = new QSpacerItem(228, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_9);
+
+        label = new QLabel(widget);
+        label->setObjectName(QString::fromUtf8("label"));
+
+        horizontalLayout->addWidget(label);
+
+        horizontalSpacer_15 = new QSpacerItem(228, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_15);
+
         stackedWidget->addWidget(page_main);
 
         gridLayout->addWidget(stackedWidget, 0, 0, 1, 1);
@@ -157,7 +183,7 @@ public:
         Foundation->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Foundation);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 516, 26));
+        menuBar->setGeometry(QRect(0, 0, 664, 26));
         Foundation->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Foundation);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -168,7 +194,7 @@ public:
 
         retranslateUi(Foundation);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(Foundation);
@@ -181,6 +207,7 @@ public:
         btn_cancel->setText(QApplication::translate("Foundation", "cancel", 0, QApplication::UnicodeUTF8));
         label_userName->setText(QApplication::translate("Foundation", "User Name:", 0, QApplication::UnicodeUTF8));
         label_passwd->setText(QApplication::translate("Foundation", "Passwd:", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("Foundation", "BVT\347\263\273\345\210\227\344\272\247\345\223\201\351\205\215\347\275\256", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

@@ -9,6 +9,7 @@ INPUT(
 ./debug\iconHelper.o
 ./debug\ithemeHelper.o
 ./debug\moc_foundation.o
+./debug\moc_define.o
 ./debug\moc_iwidget.o
 ./debug\moc_ibutton.o
 ./debug\moc_imessagebox.o

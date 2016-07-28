@@ -13,8 +13,9 @@ iMessageBox::iMessageBox(QWidget *parent) :
     /*! 窗体关闭时释放内存*/
     this->setAttribute(Qt::WA_DeleteOnClose);
     connect(ui->btn_menuClose,SIGNAL(clicked()),this,SLOT(close()));
-    connect(ui->btn_cancel,SIGNAL(clicked()),this,SLOT(close()));
+    connect(ui->btn_cancel,SIGNAL(clicked()),this,SLOT(slot_btnCancelClicked()));
     ithemeHelper::formInCenter(this);
+
 
 
 
@@ -31,7 +32,9 @@ iMessageBox::~iMessageBox()
 */
 void iMessageBox::setMessage(QString &msg, int type)
 {
-    QPixmap tmpPix("./usrfs/theme/messagebox/info.png");
+    QString src = QString("%1/../../../usrfs/theme/messagebox/info.pag").arg(QApplication::applicationDirPath());
+
+    QPixmap tmpPix(src);
     if(type==0)
     {
         ui->lab_mainIco->setPixmap(tmpPix);
@@ -75,11 +78,23 @@ void iMessageBox::mousePressEvent(QMouseEvent *e)
 
 void iMessageBox::mouseReleaseEvent(QMouseEvent *e)
 {
-    mousePressed = false;
+
 }
+
+
 
 
 void iMessageBox::on_btn_ok_clicked()
 {
+    done(1);
+    this->close();
+
+
+}
+
+void iMessageBox::slot_btnCancelClicked()
+{
+    done(1);
+    this->close();
 
 }

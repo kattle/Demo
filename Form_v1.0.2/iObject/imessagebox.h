@@ -2,7 +2,7 @@
 #define IMESSAGEBOX_H
 
 #include <QDialog>
-#include <globalfun.h>
+#include "globalfun.h"
 
 namespace Ui {
 class iMessageBox;
@@ -25,8 +25,16 @@ protected:
     void mouseMoveEvent(QMouseEvent *);
     void mousePressEvent(QMouseEvent *);
     void mouseReleaseEvent(QMouseEvent *);
+
+signals:
+
+    void noChange();
+
 private slots:
+
+
     void on_btn_ok_clicked();
+    void slot_btnCancelClicked();
 
 private:
     bool mousePressed;

@@ -9,6 +9,7 @@ INPUT(
 ./release\iconHelper.o
 ./release\ithemeHelper.o
 ./release\moc_foundation.o
+./release\moc_define.o
 ./release\moc_iwidget.o
 ./release\moc_ibutton.o
 ./release\moc_imessagebox.o

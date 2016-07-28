@@ -8,11 +8,12 @@ Foundation::Foundation(QWidget *parent) :
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
     ithemeHelper::formInCenter(ui->widLogin);
-    ui->lineEdit_passwd->setEchoMode(QLineEdit::Password);
+
     defaultUsr = "bst";
+    defaultPasswd = "123456";
     ui->lineEdit_usrName->setText(defaultUsr);
-
-
+    ui->lineEdit_passwd->setText(defaultPasswd);
+    ui->lineEdit_passwd->setEchoMode(QLineEdit::Password);
 }
 
 Foundation::~Foundation()
@@ -42,7 +43,7 @@ void Foundation::setRcPath(QString pRcPath)
 {
     m_RcPath =  pRcPath;
 }
-
+/*! 在此处对多有资源进行初始化*/
 void Foundation::initUI(QString pRcPath)
 {
     setRcPath(pRcPath);
@@ -52,16 +53,27 @@ void Foundation::initUI(QString pRcPath)
     }
 }
 
+void Foundation::slot_setStackwidget(int page)
+{
+    ui->stackedWidget->setCurrentIndex(page);
+}
+
 
 
 
 void Foundation::on_btn_login_clicked()
 {
 
-
     if(enterIntoSystem())
     {
-        ithemeHelper::showMessageBoxInfo("登录成功");
+        ithemeHelper msgHelper;
+        msgHelper.showMessageBoxInfo("登录成功");
+
+        slot_setStackwidget(1);
+
+
+
+
         //ui->stackedWidget->setCurrentIndex(1);
     }
 

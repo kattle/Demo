@@ -24,7 +24,8 @@ public:
     void setRcPath(QString pRcPath);
     void initUI(QString pRcPath = QString());
 
-
+public slots:
+    void slot_setStackwidget(int page);
 
 
 private slots:
@@ -33,6 +34,7 @@ private slots:
 private:
     Ui::Foundation *ui;
     QString defaultUsr;
+    QString defaultPasswd;
 };
 
 #endif // FOUNDATION_H

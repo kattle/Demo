@@ -40,7 +40,7 @@ QString getFileName(QString filePath)
 
 }
 
- int getKey(QString pString,  QString pPrefix )
+int getKey(QString pString,  QString pPrefix )
 {
 
     if(pString.isEmpty())
@@ -55,6 +55,5 @@ QString getFileName(QString filePath)
         return -1;
     return index;
 }
-
 
 

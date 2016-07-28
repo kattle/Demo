@@ -1,5 +1,5 @@
 #include "foundation.h"
-
+#include "define.h"
 #include <QtGui/QApplication>
 #include <QTextCodec>
 #ifdef X86
@@ -23,7 +23,9 @@ int main(int argc, char *argv[])
 #ifdef WINDOWS
     QScrollArea w;
     w.setWidget(tmpFounder);
-    QString tmpPath = QString("%1/../../src/").arg(QApplication::applicationDirPath());
+
+    QString tmpPath = QString("%1/../../../usrfs/").arg(QApplication::applicationDirPath());
+    IDE_TRACE_STR(tmpPath);
     tmpFounder->initUI(tmpPath);
     w.show();
 #else

@@ -10,7 +10,6 @@
 //ithemeHelper::~ithemeHelper()
 //{
 
-
 //}
 
 void ithemeHelper::setUTF8Code()
@@ -25,6 +24,7 @@ void ithemeHelper::setUTF8Code()
 
 void ithemeHelper::setThemeStyle(const QString &themeName)
 {
+
     QFile file(QString(":/image/%1.css").arg(themeName));
     file.open(QFile::ReadOnly);
     QString qss = QLatin1String(file.readAll());
